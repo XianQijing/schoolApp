@@ -1,27 +1,55 @@
 <template>
   <div class="bindCard">
     <div class="form">
-      <van-field v-model="value" placeholder="请输入用户名" clearable/>
+      <!-- <van-field v-model="value" placeholder="请输入用户名" @click="ss" disabled/> -->
+      <div @click="select($event)" class="school">{{school}}<p class="arrow"></p></div>
       <van-field v-model="value" placeholder="请输入用户名" clearable/>
       <van-field v-model="value" placeholder="请输入用户名" clearable/>
       <van-field v-model="value" placeholder="请输入用户名" clearable/>
       <van-field v-model="value" placeholder="请输入用户名" clearable/>
       <button>立即绑定</button>
     </div>
+    <van-popup v-model="show" position="bottom">
+      <van-picker :columns="columns" @change="onChange" />
+    </van-popup>
   </div>
 </template>
 
 <script>
-import { Field } from 'vant'
+import { Field, Popup, Picker } from 'vant'
 export default {
   name: 'bindCard',
   data () {
     return {
-      value: ''
+      value: '',
+      show: false,
+      school: '请选择你的学校',
+      columns: ['杭州', '宁波', '温州', '嘉兴', '湖州']
     }
   },
   components: {
-    [Field.name]: Field
+    [Field.name]: Field,
+    [Popup.name]: Popup,
+    [Picker.name]: Picker
+  },
+  methods: {
+    onChange (picker, value, index) {
+      console.log(`当前值：${value}, 当前索引：${index}`)
+      this.school = value
+    },
+    select (e) {
+      this.show = true
+      e.target.getElementsByClassName('arrow')[0].style.transform = 'rotate(135deg)'
+    }
+  },
+  watch: {
+    show (val) {
+      if (val === true) {
+        document.getElementsByClassName('arrow')[0].style.transform = 'rotate(135deg)'
+      } else {
+        document.getElementsByClassName('arrow')[0].style.transform = 'rotate(45deg)'
+      }
+    }
   }
 }
 </script>
@@ -58,11 +86,50 @@ export default {
       border-radius:0.25rem;
       height: 0.5rem;
       border: none;
-      padding: 0 0.3rem;
+      padding: 0 0.2rem 0 0.4rem;
       font-size: 0.15rem;
       font-weight:600;
       font-family: 'PingFangSC-Semibold';
       margin-bottom: 0.18rem;
+      background-repeat: no-repeat;
+      background-size: 0.19rem;
+      background-position: 0.1rem center;
+      input {
+        border-radius: none;
+      }
+    }
+    .school {
+      padding: 0;
+      line-height: 0.5rem;
+      overflow: hidden;
+      width: 2.16rem;
+      border-radius:0.25rem;
+      height: 0.5rem;
+      border: none;
+      padding: 0 0.2rem 0 0.4rem;
+      font-size: 0.15rem;
+      font-weight:600;
+      font-family: 'PingFangSC-Semibold';
+      margin-bottom: 0.18rem;
+      background-repeat: no-repeat;
+      background-size: 0.19rem;
+      background-position: 0.1rem center;
+      background-color: white;
+      background-image: url(.././assets/school.png);
+    }
+    .van-cell:nth-child(2) {
+      background-image: url(.././assets/name.png);
+    }
+    .van-cell:nth-child(3) {
+      background-image: url(.././assets/number.png);
+    }
+    .van-cell:nth-child(5) {
+      background-image: url(.././assets/password.png);
+    }
+    .van-cell::-webkit-input-placeholder{
+      color: #CECFCE;
+      font-size: 0.15rem;
+      font-weight: 500;
     }
   }
 }

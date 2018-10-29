@@ -24,6 +24,20 @@ input {
   font-weight:600;
   font-family: 'PingFangSC-Semibold';
 }
+input::-webkit-input-placeholder{
+  color: #CECFCE;
+}
+.arrow {
+  display: inline-block;
+  width: 0.10rem;
+  height: 0.10rem;
+  border-top: black solid 0.01rem;
+  border-right: black solid 0.01rem; 
+  float: right;
+  margin-top: 0.2rem;
+  transform: rotate(45deg);
+  transition: transform 0.5s;
+}
 @media screen and (min-width:767px) {
   html{
     font-size:13.33333333vw * 1.5;
