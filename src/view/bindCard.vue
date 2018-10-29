@@ -16,11 +16,11 @@ export default {
   name: 'bindCard',
   data () {
     return {
-      value:''
+      value: ''
     }
   },
   components: {
-    [Field.name]: Field,
+    [Field.name]: Field
   }
 }
 </script>
@@ -32,7 +32,9 @@ export default {
   background-size: cover;
   font-size: 16px;
   .form {
-    padding: 0.94rem 0.46rem 0.25rem 0.46rem;
+    padding: 0.94rem 0 0.25rem 0;
+    width: 2.78rem;
+    margin: 0 auto;
     button{
       border: none;
       border-radius: 0.25rem;
