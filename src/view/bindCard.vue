@@ -123,6 +123,9 @@ export default {
     .van-cell:nth-child(3) {
       background-image: url(.././assets/number.png);
     }
+    .van-cell:nth-child(4) {
+      background-image: url(.././assets/password.png);
+    }
     .van-cell:nth-child(5) {
       background-image: url(.././assets/password.png);
     }
