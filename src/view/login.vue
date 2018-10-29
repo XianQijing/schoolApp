@@ -1,7 +1,6 @@
 <template>
   <div class="login">
-    <link href="https://cdn.jsdelivr.net/npm/animate.css@3.5.1" rel="stylesheet" type="text/css">
-      <transition
+    <transition
       name="custom-classes-transition"
       enter-active-class="animated flipInY">
         <div class="toLogin" v-if="show === true">
@@ -12,7 +11,7 @@
               <input type="text" placeholder="请输入账号">
               <p>密码</p>
               <input type="password" placeholder="请输入密码">
-              <button>登录</button>
+              <button @click="$router.push('/bindCard')">登录</button>
               <p class="forget">忘记密码？</p>
               <p class="toregister">还没有账号？<span @click="ss">马上注册</span></p>
             </div>
@@ -40,6 +39,7 @@
     </transition>
   </div>
 </template>
+
 <script>
 export default {
   name: 'login',
@@ -58,7 +58,7 @@ export default {
 
 <style lang="less" scoped>
 .login {
-  background-image: url(.././assets/background.png);
+  background-image: url(../assets/background.png);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;

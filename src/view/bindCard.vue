@@ -10,6 +10,7 @@
     </div>
   </div>
 </template>
+
 <script>
 import { Field } from 'vant'
 export default {
@@ -24,10 +25,11 @@ export default {
   }
 }
 </script>
+
 <style lang="less" scoped>
 .bindCard {
   height: 100%;
-  background-image: url('.././assets/bindBack.png');
+  background-image: url('../assets/bindBack.png');
   background-repeat: no-repeat;
   background-size: cover;
   font-size: 16px;
