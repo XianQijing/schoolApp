@@ -6,6 +6,7 @@ import Index from '@/view/index'
 import HomePage from '@/view/homePage'
 import Charge from '@/view/charge'
 import PersonInfo from '@/view/PersonInfo'
+import Card from '@/view/card'
 
 Vue.use(Router)
 
@@ -41,6 +42,11 @@ export default new Router({
           path: 'PersonInfo',
           name: 'PersonInfo',
           component: PersonInfo
+        },
+        {
+          path: 'card',
+          name: 'Card',
+          component: Card
         }
       ]
     }

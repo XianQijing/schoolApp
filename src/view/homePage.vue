@@ -5,7 +5,7 @@
       <span>上海科技大学</span>
       <p>余额：750.3</p>
       <div class="menu">
-        <div>
+        <div @click="$router.push('/card')">
           <img src="../assets/card.png" alt="">
           <p style="color: #5BE2FF;">一卡通</p>
         </div>
