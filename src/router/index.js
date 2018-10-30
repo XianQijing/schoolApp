@@ -5,6 +5,7 @@ import BindCard from '@/view/bindCard'
 import Index from '@/view/index'
 import HomePage from '@/view/homePage'
 import Charge from '@/view/charge'
+import PersonInfo from '@/view/PersonInfo'
 
 Vue.use(Router)
 
@@ -35,6 +36,11 @@ export default new Router({
           path: 'charge',
           name: 'Charge',
           component: Charge
+        },
+        {
+          path: 'PersonInfo',
+          name: 'PersonInfo',
+          component: PersonInfo
         }
       ]
     }
