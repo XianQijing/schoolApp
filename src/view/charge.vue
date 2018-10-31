@@ -1,10 +1,10 @@
 <template>
   <div class="charge">
-    <header-bar />
+    <!-- <header-bar /> -->
     <div class="Menu">
       <p style="margin-top: 0;">学习缴费</p>
       <div class="select">
-        <div>
+        <div @click="$router.push({name: 'Tuition'})">
           <img src="../assets/xueza.png" alt="">
           <p style="color:#5BE2FF;">学杂费</p>
         </div>
@@ -15,22 +15,22 @@
       </div>
       <p>生活缴费</p>
       <div class="select">
-        <div>
+        <div  @click="$router.push({name: 'Cost', query: {type: '0'}})">
           <img src="../assets/shuifei.png" alt="">
           <p style="color:#AA80FF">水费</p>
         </div>
-        <div @click="$router.push({name: 'Tuition'})">
+        <div  @click="$router.push({name: 'Cost', query: {type: '1'}})">
           <img src="../assets/dianfei.png" alt="">
           <p style="color:#F6A25D">电费</p>
         </div>
       </div>
       <p>其他缴费</p>
       <div class="select">
-        <div>
+        <div @click="$router.push({name: 'Cost', query: {type: '2'}})">
           <img src="../assets/xueza.png" alt="">
           <p style="color:#7E82FE">网费</p>
         </div>
-        <div>
+        <div @click="$router.push({name: 'Cost', query: {type: '3'}})">
           <img src="../assets/huafei.png" alt="">
           <p style="color:#FFCF66">话费</p>
         </div>
@@ -80,7 +80,7 @@ export default {
     }
   }
   .headerBar {
-    background: rgba(72,72,111,0.7);
+    // background: rgba(72,72,111,0.7);
     box-shadow:0px 1px 4px 0px rgba(53,52,83,0.3);
   }
 }

@@ -2,7 +2,8 @@
   <div class="personinfo">
     <div class="info">
       <div class="top_bar">
-        <img src="../assets/img/setting.png" alt="">
+        <!-- <van-icon name="arrow-left" @click="goBack" />
+        <img src="../assets/img/setting.png" alt=""> -->
       </div>
       <div class="name">xiaoguaishou</div>
       <img class="head" src="../assets/img/header.png" alt="">
@@ -50,6 +51,11 @@ export default {
   components: {
     [Cell.name]: Cell,
     [CellGroup.name]: CellGroup
+  },
+  methods: {
+    goBack () {
+      window.history.back()
+    }
   }
 }
 </script>
@@ -69,11 +75,20 @@ export default {
       padding-top: 0.27rem;
       overflow: hidden;
       width: 100%;
+      font-size: 0.16rem;
       img {
         margin-right: 0.22rem;
         width: 3.7vw;
         display: block;
         float: right;
+      }
+      i {
+        font-size: 0.16rem;
+        background-color: rgba(53,52,83,0.3);
+        border-radius: 0.5rem;
+        color: #fff;
+        position: fixed;
+        z-index: 4000;
       }
     }
     .name {
