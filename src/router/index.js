@@ -7,6 +7,7 @@ import HomePage from '@/view/homePage'
 import Charge from '@/view/charge'
 import PersonInfo from '@/view/PersonInfo'
 import Card from '@/view/card'
+import Tuition from '@/view/Tuition'
 
 Vue.use(Router)
 
@@ -47,6 +48,11 @@ export default new Router({
           path: 'card',
           name: 'Card',
           component: Card
+        },
+        {
+          path: 'Tuition',
+          name: 'Tuition',
+          component: Tuition
         }
       ]
     }

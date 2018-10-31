@@ -19,7 +19,7 @@
           <img src="../assets/shuifei.png" alt="">
           <p style="color:#AA80FF">水费</p>
         </div>
-        <div>
+        <div @click="$router.push({name: 'Tuition'})">
           <img src="../assets/dianfei.png" alt="">
           <p style="color:#F6A25D">电费</p>
         </div>
