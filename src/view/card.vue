@@ -6,7 +6,7 @@
         <p>{{school}}一卡通</p>
         <p>ID&nbsp;{{id}}</p>
         <p>余额￥{{money}}</p>
-        <p>充值</p>
+        <p @click="$router.push({name: 'PayFee'})">充值</p>
       </div>
       <div class="bill">
         <div class="zhangdan">
