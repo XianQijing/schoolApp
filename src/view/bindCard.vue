@@ -16,7 +16,7 @@
 </template>
 
 <script>
-import { Field, Popup, Picker } from 'vant'
+import { Field, Picker } from 'vant'
 export default {
   name: 'bindCard',
   data () {
@@ -29,7 +29,6 @@ export default {
   },
   components: {
     [Field.name]: Field,
-    [Popup.name]: Popup,
     [Picker.name]: Picker
   },
   methods: {

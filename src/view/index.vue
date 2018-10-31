@@ -5,7 +5,7 @@
     </div>
     <div class="sideBar">
       <img src="../assets/favourite.png" alt="">
-      <img src="../assets/sao.png" alt="">
+      <img @click="$router.push({name: 'Pay'})" src="../assets/sao.png" alt="">
       <img @click="$router.push({name: 'PersonInfo'})" src="../assets/person.png" alt="">
     </div>
   </div>

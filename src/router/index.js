@@ -8,6 +8,7 @@ import Charge from '@/view/charge'
 import PersonInfo from '@/view/PersonInfo'
 import Card from '@/view/card'
 import Tuition from '@/view/Tuition'
+import Pay from '@/view/pay'
 
 Vue.use(Router)
 
@@ -53,6 +54,11 @@ export default new Router({
           path: 'Tuition',
           name: 'Tuition',
           component: Tuition
+        },
+        {
+          path: 'pay',
+          name: 'Pay',
+          component: Pay
         }
       ]
     }

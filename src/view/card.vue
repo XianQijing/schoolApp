@@ -43,6 +43,7 @@ require('echarts/lib/component/tooltip')
 require('echarts/lib/component/title')
 require('echarts/lib/component/legend')
 require('echarts/lib/component/grid')
+require('echarts/lib/component/dataZoom')
 export default {
   name: 'card',
   components: {
@@ -83,7 +84,11 @@ export default {
             show: false
           },
           axisLabel: {
-            color: 'rgba(255,255,255,0.9)'
+            color: 'rgba(255,255,255,0.9)',
+            interval: 0
+          },
+          splitArea: {
+            interval: 5
           }
         },
         yAxis: {
@@ -98,11 +103,45 @@ export default {
           left: 0,
           right: 0
         },
+        tooltip: {
+          trigger: 'item',
+          formatter: '{b}月消费总额：{c}',
+          triggerOn: 'click'
+        },
         series: [{
-          data: [820, 932, 901, 934, 1290, 1330, 1320, 1354, 1315, 4545, 4877],
+          data: [820, 932, 901, 934, 1290, 1330, 1320, 1354, 1315, 1545, 1877],
           type: 'line',
-          smooth: true
-        }]
+          smooth: true,
+          symbolSize: 10,
+          symbol: 'circle',
+          // showSymbol: false,
+          hoverAnimation: true,
+          lineStyle: {
+            color: {
+              type: 'linear',
+              x: 1,
+              y: 0,
+              x2: 0,
+              y2: 0,
+              colorStops: [{
+                offset: 0, color: '#FF91F0' // 0% 处的颜色
+              }, {
+                offset: 1, color: '#2FA3F4' // 100% 处的颜色
+              }]
+            },
+            width: 4
+          },
+          itemStyle: {
+            color: '#AA86FF',
+            borderWidth: 2,
+            borderColor: 'white'
+          }
+        }],
+        dataZoom: [
+          {
+            type: 'inside'
+          }
+        ]
       })
     }
   }
@@ -118,6 +157,7 @@ export default {
   overflow: auto;
   .headerBar {
     box-shadow:0px 1px 4px 0px rgba(53,52,83,0.3);
+    background-color: #48486F;
   }
   .studentCard {
     height: 1.42rem;
