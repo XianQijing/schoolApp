@@ -1,6 +1,6 @@
 <template>
   <div class="pay">
-    <header-bar></header-bar>
+    <!-- <header-bar></header-bar> -->
     <div class="Menu">
       <p>默认付款方式</p>
       <div class="code">

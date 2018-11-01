@@ -45,7 +45,7 @@ export default {
   name: 'homePage',
   data () {
     return {
-      show: true
+      show: false
     }
   }
 }

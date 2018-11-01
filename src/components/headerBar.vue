@@ -24,7 +24,8 @@ export default {
   height: 0.64rem;
   position: fixed;
   width: 100%;
-  // box-shadow:0px 1px 4px 0px rgba(53,52,83,0.3);
+  background:rgba(87,67,132,0.3);
+  box-shadow:0px 1px 4px 0px rgba(53,52,83,0.3);
   .backArrow {
     transform: rotate(225deg);
     width: 0.10rem;
