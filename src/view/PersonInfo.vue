@@ -66,6 +66,7 @@ export default {
   padding: 0.15rem 0.15rem;
 }
 .personinfo {
+  padding-bottom: 0.67rem;
   .info {
     background-image: url(../assets/img/bg.png);
     background-size: cover;

@@ -14,9 +14,10 @@
 <style lang="less" scoped>
 .index {
   height: 100%;
+  overflow: hidden;
   .sideBar {
-    position: fixed;
-    bottom: -0.63rem;
+    position: relative;
+    bottom: 0.63rem;
     width: 100%;
     background-color: rgba(68, 66, 97, 0.7);
     height: 1.26rem;

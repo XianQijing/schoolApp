@@ -5,9 +5,9 @@ import App from './App'
 import router from './router'
 import './assets/css/style.less'
 import 'animate.css'
-import { Popup, Icon } from 'vant'
+import { Popup, Icon, Picker, Toast } from 'vant'
 
-Vue.use(Popup).use(Icon)
+Vue.use(Popup).use(Icon).use(Picker).use(Toast)
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */
